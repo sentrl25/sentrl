@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-AU" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SENTRL | Intelligent Infrastructure</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              sentrl: {
+                bg: '#06080A', // Near-Black Blue
+                surface: '#0E1419', // Charcoal Blue-Black
+                cyan: '#3FE6FF', // Electric Cyan
+                cyanHover: '#5CF2FF', // Neon Ice Blue
+                tech: '#1E7FBF', // Cool Tech Blue
+                steel: '#4C6F8A', // Steel / Digital Blue
+                text: '#E2EDF3', // Cool Light Grey
+                muted: '#6E7C87', // Soft Grey-Blue
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            backgroundImage: {
+              'grid-pattern': "linear-gradient(to right, #1E7FBF0A 1px, transparent 1px), linear-gradient(to bottom, #1E7FBF0A 1px, transparent 1px)",
+              'radial-glow': "radial-gradient(circle at center, var(--tw-gradient-stops))",
+            },
+            animation: {
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'drift': 'drift 20s linear infinite',
+              'scanline': 'scanline 8s linear infinite',
+            },
+            keyframes: {
+              drift: {
+                '0%': { transform: 'translate(0, 0)' },
+                '50%': { transform: 'translate(-2%, 2%)' },
+                '100%': { transform: 'translate(0, 0)' },
+              },
+              scanline: {
+                '0%': { transform: 'translateY(-100%)' },
+                '100%': { transform: 'translateY(100%)' }
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+      body {
+        background-color: #06080A;
+        color: #E2EDF3;
+        font-family: 'Inter', sans-serif;
+        overflow-x: hidden;
+      }
+      
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #06080A;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1E7FBF;
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #3FE6FF;
+      }
+
+      .glow-text {
+        text-shadow: 0 0 30px rgba(63, 230, 255, 0.5);
+      }
+      
+      .tech-border-gradient {
+        border-image: linear-gradient(to bottom right, rgba(63,230,255,0.3), rgba(6,8,10,0)) 1;
+      }
+
+      .glass-panel {
+        background: rgba(14, 20, 25, 0.6);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(76, 111, 138, 0.2);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "framer-motion": "https://esm.sh/framer-motion@^12.23.26"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
